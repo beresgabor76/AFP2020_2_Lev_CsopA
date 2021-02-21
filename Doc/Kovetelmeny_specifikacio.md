@@ -19,21 +19,29 @@ pl. laptopon böngészőben vagy mobilalkalmazásban, ezzel segítve őt abban, 
 
 **Üzleti szereplő:**  
 - vevő (zenehallgató)  
+- streamelő (zenehallgató)
   
 **Üzleti munkatárs:**  
 - zenei kiadó  
+- zenei stream szolgáltató, pl. Spotify
+- idegen nyelvű online dalszöveg gyűjtemény, pl. azlyrics.com
   
 **Üzleti entitások:**    
 - CD betétkönyvében lévő dalszöveg eredeti nyelven  
+- online dalszöveg gyűjteményben lévő dalszöveg eredeti nyelven  
 
 **Üzleti folyamatok:**  
 
-**Zenei kiadó számára:**  
+**Zenei kiadó számára:**   
 1. zenei kiadó a CD tokjában mellékletként elhelyez egy betétkönyvet, melyben a dalszövegek az eredeti nyelvükön szerepelnek nyomtatott formában  
   
-**Vevő számára:**  
+**Vevő számára:**   
 1. vevő a megvásárolt CD betétkönyvében szereplő eredeti nyelvű dalszöveget elolvassa, nyelvtudás esetén szótár használatával megpróbálja értelmezni  
-   
+
+**Streamelő számára:**   
+1. a stream szolgáltatást igénybe vevő zenehallgató az idegen nyelvű dalszöveg gyűjteményben megkeresi és próbálja lefordtani, értelmezni 
+a dalszöveget saját maga számára   
+
 
 ## 6. Igényelt üzleti folyamatok modellje
   
