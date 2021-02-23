@@ -11,6 +11,25 @@ pl. laptopon böngészőben vagy mobilalkalmazásban, ezzel segítve őt abban, 
 
 ## 3. Vágyálomrendszer leírása
 
+A cél, hogy a feltöltők, a letöltők és az adminisztrátorok számára egységes informatikai rendszer álljon rendelkezésre, amely
+hatékonyan képes támogatni a dalszövegek tárolását, keresését, rendszerezését, megjelenítését, ellenőrzését,  javítását, így 
+támogatva az adminisztrátorok könnyebb munkavégzését és a felhasználók könnyed szórakozását. A létrehozandó rendszerben 
+nyilván kell tartani a dalszövegek magyar és idegen nyelű forrásait, továbbá feltöltők regisztrációval és rendszerhasználattal
+kapcsolatos adatait, emellett az adminisztrátorok munkavégzéséhez szükséges  tudnivalókat. A feltöltést végző felhasználóknak 
+legyen lehetőségük név, jelszó, e-mail megadása után regisztrálniuk magukat a rendszerben. Sikeres regisztrációt követően a dalszöveg
+előadóját, címét, album címét, kiadás évét megadva az eredeti és magyar nyelvű szöveget felvihesse a rendszerbe a jóváhagyásra 
+váró dalszövegek közé. Miután az elbírálásra várók közé került a dalszöveg, legyen lehetőség  nyomonkövetni a státuszt, amennyiben
+a fordítás visszautasításra került legyen lehetőség javításra és újbóli jóváhagyás igénylésére. Az adminisztrátorok a rendszerbe
+való belépést követően a jóváhagyandó fordításra váró dalszövegek közül az általa beszélt nyelveknek megfelelőeket ellenőrzi, majd 
+jóváhagyja vagy visszautasítja a feltöltést. Jóváhagyás után megtörténik a véglegesítés, visszautasítás esetén pedig a feltöltő feladata
+javítani a fordítást. Ennek elvégzésére egy hónapja van, az adminisztrátor az egy hónapnál régebben visszautasított fordításokat
+törli. A letöltő számára nincs szükség regisztrációra, alapvetően kétféle keresési funkció áll a rendelkezésére. Az egyik lehetőség, 
+hogy a dalszöveg előadója, címe vagy az album címe alapján tud keresni, majd a találatok közül egymás mellett meg tudja jeleníteni
+a dalszöveg eredeti és  magyar nyelvű fordítását. Másik lehetőség, hogy a legújabb jóváhagyott feltöltések közül keressen, majd
+amennyiben számára érdekeset talált, akkor a megjelenítést az előbbivel analóg módon kivitelezheti. Fontos követelmény, hogy
+a rendszer minden érintett számára interneten keresztül elérhető legyen, a felhasználói felület könnyen értelmezhető, használata 
+az érintettek számra gyorsan tanulható legyen, ne kívánjon speciális képzést. További kritérium az elterjedt szabványok alkalmazása,
+és az operációsrendszertől való függetlenség. 
 
 ## 4. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása
 
