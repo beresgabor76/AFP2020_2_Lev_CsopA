@@ -8,6 +8,8 @@ pl. laptopon böngészőben vagy mobilalkalmazásban, ezzel segítve őt abban, 
 
 ## 2. Jelenlegi helyzet leírása
 
+Nagyon sok zenét szerető hallgató számára nem csak a zene fontos egy dalban, hanem annak szövege is. Azonban egy dal szövege csak kevés esetben érhető el. A zenei kiadók ezt az igényt úgy próbálják meg kielégíteni, hogy egy zenei kiadvány (pl: CD) nyomtatott borítójának belsejében adják meg a kiadott dalok szövegét. Ha a kiadott dal idegen nyelvű, akkor viszont a borítóban leírt szöveg is csak idegen nyelven található. Az a hallgató, aki az idegen nyelvű dalszöveg magyar fordítását szeretné elérni, kénytelen saját maga lefordítani vagy lefordíttatni a szöveget.
+Napjainkban már nagyon sok zene elérhető online is, vannak már dalszöveg gyűjtemények az interneten. A zenekedvelő hallgatótól viszont sok energiát kíván meg, ha az idegen nyelvű dalszöveget és annak magyar fordítását egy helyen szeretné megtalálni, ráadásul legtöbb esetben a magyar fordítást saját magának kell elvégeznie, ha a nyelvtudása ezt lehetővé teszi.
 
 ## 3. Vágyálomrendszer leírása
 
