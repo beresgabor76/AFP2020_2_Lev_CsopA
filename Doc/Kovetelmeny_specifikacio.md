@@ -132,6 +132,19 @@ a dalszöveget saját maga számára
 
 ## 7. Követelménylista
 
+ID|Verzió|Név|Kifejtés
+--|------|---|--------
+K01|V1.0|Feltöltők adminisztrációja|Feltöltők regisztrálása, beléptetése és törlése az igényelt üzleti folyamatokban leírtak szerint.  
+K02|V1.0|Letöltők adminisztrációja|Letöltők regisztrálása, beléptetése és törlése az igényelt üzleti folyamatokban leírtak szerint.
+K03|V1.0|Adminisztrátorok adminisztrációja|Adminisztrátorok regisztrálása, beléptetése és törlése az igényelt üzleti folyamatokban leírtak szerint.
+K04|V1.0|Feltöltők által végezhető műveletek megvalósítása|Dalszövegek feltöltése, kategorizálása, módosítása, törlése az igényelt üzleti folyamatokban leírtak szerint.
+K05|V1.0|Letöltők által végezhető műveletek megvalósítása|Dalszövegek böngészése, keresése, megtekintése és letöltése az igényelt üzleti folyamatokban leírtak szerint.
+K06|V1.0|Adminisztrátorok által végezhető műveletek megvalósítása|Feltöltött dalszövegek böngészése, ellenőrzése, jóváhagyása vagy visszautasítása, illetve nyomon követése az igényelt üzleti folyamatokban leírtak szerint.
+K07|V1.0|A rendszer a felhasználók széles rétege számára legyen könnyen elérhető|Interneten keresztűl, minden népszerű böngészőben elérhető, szabványos technológiákat használó felhasználói felület megvalósítása.
+K08|V1.0|Platformfüggetlen, robusztus működés|Szabványos, az iparágban régóta bevált, operációs rendszertől független technológiák használata: Node.js, JavaScript, Java, Apache HTTP szerver, MySQL adatbázis kezelő.
+K09|V1.0|Költséghatékony üzemeltetés|A szabványos és elterjedt technológiák használata biztosítja.
+K10|V1.0|Bővíthetőség|A kezelt adatok mennyiségének, valamint a felhasználók számának bővíthetősége és utólag újabb funkciók hozzáadásának lehetőségének biztosítása. 
+
 
 ## 8. Irányított és szabad szöveges riportok szövege
 
