@@ -138,4 +138,12 @@ a dalszöveget saját maga számára
 
 ## 9. Fogalomszótár
 
+Informatikai rendszer: A hardverek és szoftverek olyan kombinációjából álló rendszer, amit az adat- illetve információkezelés különböző folyamatainak elvégzésére lehet alkalmazni.
+
+Streamelő: A streamelő a streamelést végző személy. A streamelés vagy streaming olyan adatátviteli technika, amely különféle médiatartalmak gyors továbbítását, letöltését teszi lehetővé hálózaton keresztül, akár Interneten át is.
+
+Stream szolgáltatás: Valamilyen médiatartalom elérésének lehetővé tétele, pl, egy weboldal amelyen keresztül el lehet érni az ilyen tartamakat.
+
+Zenei kiadó: a zeneipar azon szereplője, aki hangfelvételek és zenei videók felvételét, gyártását, terjesztését, valamint az ehhez kapcsolódó marketing- és promóciós tevékenységeket felügyeli.
+
 
