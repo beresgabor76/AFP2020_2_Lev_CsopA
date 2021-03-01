@@ -49,6 +49,39 @@ más rendszerekkel való összekapcsolása sem.
   
 ## 5. Forgatókönyvek
 
+A *Dalszovegek.hu főoldala*  jelenik meg minden felhasználó számára legelőször, amely segítségével lehetőség van a rendszerbe 
+történő bejelentkezésre, regisztrációra illetve keresésre. E funkciók közül nyomógombok segítségével választhat a felhasználó.
+Bejelentkezést választva a Bejelentkezés, regisztrációt választva a Regisztráció, keresést választva a Dalszöveg keresése oldal
+kerül betöltésre. A menü mellett az oldalon még megjelenik két statisztika is, melyek egyike a legújabban feltöltött 
+dalszövegeket, míg másika a legnépszerűbbeket tartalmazza. Elegáns designként egy gitár és a honlap címe is látható az oldalon 
+e kép és cím végigkíséri a navigiációt.
+
+A *Bejelentkezés dalszövegek feltöltéséhez vagy adminisztrációjához* oldal a bejelentkezéshez szükséges e-mail cím és jelszó
+mezőket tartalmazza, továbbá az említett képet és az oldal nevét. Természetesen látható a bejelentkezés, továbbá egy mégsem 
+feliratú nyomógomb. A bejelentkezést választva a rendszer felismeri, hogy feltöltő, vagy adminisztrátor a bejelentkezett
+felhasználó és ennek függvényében irányítja a következő oldalakra. Amennyiben a mégsem lehetőséget választja az alkalmazó, 
+akkor automatikusan a főoldalra kerül a user. Sikertelen bejelentkezés esetén a felhasználót a rendszer értesíti. Ha
+adminisztrátorként jelentkezik be valaki, megjelennek számára az általa beszélt nyelvű, még jóvá nem hagyott dalok  feltöltési
+sorrendben, amiből választva megjelennek a dalszövegek egymás mellett a dalszövegek oldalhoz hasonlóan. Az oldal alján levő 
+jóváhagyás vagy visszautasítás gombokkal tudja elfogadni vagy sem, egy hibák rovatban megjelölheti a kifogásolt részleteket 
+(x. sor: hibás szó v. kifejezés formában).
+
+*A dalszöveg keresése a gyűjteményben* oldal lehetőséget biztosít előadó, dalszövegrészlet, vagy dal címe alapján történő 
+keresésre az adatbázisban. Természetesen ezek a funkciók kombinálhatóak is. Két nyomógomb közül az egyik a keresés indítására, 
+míg a másik a főoldalra történő visszalépésre szolgál. Sikeres keresés esetén betöltődik a kívánt dalszövet és fordítást
+tartalmazó oldal.  Amennyiben nem találaható a feltételeknek megfelelő tartalom  a felhasználó erről üzenetet kap.
+
+Sikeres keresést követően *A dalszöveg megjelenítése* oldalon  látható a jól ismert kép mellett a dalszöveg eredeti nyelvű
+szövege, illetve magyar nyelvű fordítása. Erről az oldalról nem lehet tovább navigálni.
+
+*A dalszöveg feltöltése a gyűjteménybe* oldal a bejelentkezést követően kerül betöltésre. Itt szükséges megadni a dal címét,
+előadóját, eredeti és magyar nyelvű szövegét, amit egy-egy fájl feltöltésével lehet megvalósítani. A fetöltött anyagok csak
+jóváhagyást követően érhetők el. Erről az oldalról nincs lehetőség tovább navigálni.
+
+*Regisztráció dalszövegek feltöltéséhez* oldalon regisztrációhoz minimálisan szükséges adatok megadására van szükség, amelyek az
+e-mail cím, azonosító(megjelenített név), jelszó, megadására szorítkoznak. A regisztráció nyomógombot megnyomva a felhasználó
+visszajelzést kap a sikerről, vagy a sikertelen kísérletről.
+
 
 ## 6. Funkció–követelmény megfeleltetés
 
