@@ -27,7 +27,7 @@
 ![kereses](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/kereses_oldal.jpg)  
   
 ### Dalszöveg képernyő  
-  
+![dalszoveg](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/dalszoveg_oldal.jpg)    
   
 ## 5. Forgatókönyvek
 
