@@ -18,8 +18,9 @@ interneten keresztűl elérhető nyilvános honlap is, amin keresztül a dalszö
 lesz minden látogató számára. A dalszövegek feltöltéséhez már regisztráció szükséges a felhasználók részéről.
 A fejlesztés első ütemében a fő funkciók (feltöltők nyilvántartása és kezelése, dalszövegek nyilvántartása
 és adminisztrációja,) megbízható működésének megvalósítása a célja, de nem cél a rendszer általánosabb felhasználásra történő
-felkészítése, mint pl. a dalszövegek fordítása, ezt minden felhassználó önállóan végzi továbbá nem cél a telepített rendszer
-más rendszerekkel való összekapcsolása sem.
+felkészítése, mint pl. a dalszövegek fordítása, ezt minden felhassználó önállóan végzi továbbá jelenleg nem cél a telepített 
+rendszer más rendszerekkel való összekapcsolása sem. Figyelembe véve, hogy a backend szerver alkalmazás egy rest api, a jövőben 
+fejleszteni lehet kliens alkalmazást mobil platformra is, a jelenleg tervezett böngészőben futón túl.
 
 ## 2. Használati esetek
 
