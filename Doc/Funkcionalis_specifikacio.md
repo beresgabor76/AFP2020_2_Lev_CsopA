@@ -40,7 +40,7 @@ Előfeltételek:
 
 *	adminisztrátor és feltöltők részére a rendszer használatához jogosultság, azaz jelszó szükséges
 
-![usecase_dia](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/usecasedia.jpg)
+![usecase_dia](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/usecasedia.png)
 
 ## 3. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
  
