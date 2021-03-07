@@ -24,6 +24,23 @@ fejleszteni lehet kliens alkalmazást mobil platformra is, a jelenleg tervezett 
 
 ## 2. Használati esetek
 
+A rendszer használói a következők:
+
+*	feltöltő
+*	letöltő
+*	adminisztrátor
+
+A rendszernek a következő funkciókat kell ellátnia:
+
+*	adminisztrátor tudjanak dalszövegeket jóváhagyni, visszautasítani, és a visszautasítottakból törölni
+
+*	feltöltők tudjanak feltölteni és a visszautasított szövegeket módosítani
+
+Előfeltételek:
+
+*	adminisztrátor és feltöltők részére a rendszer használatához jogosultság, azaz jelszó szükséges
+
+![usecase_dia](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/usecasedia.jpg)
 
 ## 3. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
  
