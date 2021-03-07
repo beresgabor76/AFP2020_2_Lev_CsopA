@@ -85,6 +85,17 @@ visszajelzést kap a sikerről, vagy a sikertelen kísérletről.
 
 
 ## 6. Funkció–követelmény megfeleltetés
-
+ID|Verzió|Követelmény|Funkció
+--|------|-----------|-------
+K01|V1.0|Feltöltők nyilvántartása|Feltöltők regisztrációjának, beléptetésének, törlésének megvalósítása a programban a használati esetekben leírtak szerint.  
+K02|V1.0|Adminisztrátorok nyilvántartása|Adminisztrátorok regisztrálása, beléptetése és törlése a használati esetekben leírtak szerint.
+K03|V1.0|Dalszövegek nyilvántartása|A feltöltött dalszövegek tárolása, kategorizálása, módosítása, lekérdezése használati esetekben leírtak szerint. 
+K04|V1.0|Feltöltők által végezhető műveletek megvalósítása|Dalszövegek feltöltése, kategorizálása, módosítása, törlése a használati esetekben leírtak szerint.
+K05|V1.0|Letöltők által végezhető műveletek megvalósítása|Dalszövegek böngészése, keresése, megtekintése és letöltése a használati esetekben leírtak szerint.
+K06|V1.0|Adminisztrátorok által végezhető műveletek megvalósítása|Feltöltött dalszövegek böngészése, ellenőrzése, jóváhagyása vagy visszautasítása, illetve nyomon követése a használati esetekben leírtak szerint.
+K07|V1.0|A rendszer a felhasználók széles rétege számára legyen könnyen elérhető|Interneten keresztül, minden népszerű böngészőben elérhető felhasználói felület megvalósítása HTML, JavaScript és React technológiák használatával.
+K08|V1.0|Platformfüggetlen, robusztus működés|Szabványos, az iparágban régóta bevált, operációs rendszertől független technológiák (HTML, JavaScript, Node.js, React) használata biztosítja.
+K09|V1.0|Költséghatékony üzemeltetés|A szabványos, elterjedt és nyílt technológiák használata biztosítja a szerver oldalon: Node.js, MongoDB.
+K10|V1.0|Bővíthetőség|Robosztus adatbáziskezelő rendszer használata, a tervezésnél figyelembe vesszük, hogy később milyen bővítési igények léphetnek fel. 
 
 
