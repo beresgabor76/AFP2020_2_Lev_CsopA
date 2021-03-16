@@ -49,14 +49,31 @@
 ### 5.5 Képernyőtervek  
    
 ## 6. Fizikai környezet
-   
+
 ### 6.1 Vásárolt softwarekomponensek és külső rendszerek
-    
+
+Szoftverkomponensek vásárlása nem szükséges. 
+
 ### 6.2 Hardver és hálózati topológia
-   
+
+- Az alkalmazás web platformra készül.
+- Tetszőleges internet böngészőn keresztül elérhető a felhasználó felület.
+- Szerverhez kapcsolódnak:
+-- kliens gépek a helyi hálózaton 
+-- interneten bárki számára elérhető honlap  
+ 
 ### 6.3 Fizikai alrendszerek
-     
+
+- Webszerver: 3000-es porton elérhető HTTP szolgáltatás 
+- MongoDB adatbázis szerver
+- Kliens gépek: a követelményeknek megfelelő internet böngésző futtatására alkalmas PC-k.
+
 ### 6.4 Fejlesztő eszközök
+
+- Visual Studio 
+- Visual Studio Code
+- MongoDB Compass
+- Notepad++
    
 ## 8. Architekturális terv
     
