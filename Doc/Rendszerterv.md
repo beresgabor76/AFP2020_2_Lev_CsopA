@@ -225,13 +225,38 @@ Szoftverkomponensek vásárlása nem szükséges.
 - Notepad++
    
 ## 8. Architekturális terv
+  
+REST (Representational State Transfer) típusú architektúra, mely kliensekből és egy szerverből áll. A kliensek kéréseket indítanak a szerverek felé,
+ a szerver kéréseket dolgoz fel és a megfelelő választ visszaküldi. Azaz a kérések és a válaszok erőforrás-reprezentációk szállítása köré 
+ épülnek. Más szavakkal: a REST egy egyszerű módszer arra, hogy kapcsolatot építsünk ki két független rendszer között. 100%-ban HTTP protokollra 
+ épül, annak minden tulajdonságát kihasználja.  
     
 ### 8.1 Architekturális tervezési minta
+  
+A kliensek el vannak különítve a szerverektől egy egységes interfész által, azaz a kliensek nem foglalkoznak adattárolással, ami a szerver feladata,
+ és így a kliens kód hordozhatósága megnő. A szerverek nem foglalkoznak a felhasználói felülettel vagy a kliens állapotával, ezért a szerverek
+ egyszerűbbek és még skálázhatóbbak lehetnek. A szerverek és kliensek áthelyezhetőek és fejleszthetőek külön-külön is, egészen addig amíg 
+ az interfész nem változik meg.  
+  
+A kliens-szerver kommunikáció további korlátja: a szerveren nem tárolják a kliens állapotát a kérések között. Minden egyes kérés bármelyik klienstől
+ tartalmazza az összes szükséges információt a kérés kiszolgálásához, és minden állapotot a kliens tárol.  
     
 ### 8.2 Az alkalmazás rétegei, fő komponensei, ezek kapcsolatai
-    
+  
+A szerver egy ún. REST API, mely Javascript nyelven íródik a Node.js szoftverrendszer felhasználásával, melyet skálázható internetes alkalmazások,
+ mégpedig webszerverek készítésére hoztak létre eseményalapú, aszinkron I/O-val a túlterhelés minimalizálására és a skálázhatóság maximalizálására.  
+   
+A kliens szintén Javascript nyelven íródik, React könyvtárak felhasználásával, mely interaktív felhasználói felületek egyszerű készítésére szolgál. 
+ Minden állapothoz egy nézetet tudunk rendelni az alkalmazásban, melyeket az állapotok, adatok változása esetén a React frissít és renderel a böngészőben. 
+ A deklaratív nézetek a kódot jobban áttekinthetővé teszik és könnyebb a hibakeresés benne. A React kliens egységbe zárt komponenseket tartalmaz,
+ melyek önállóan menedzselik saját állapotukat, az egyes nézetekbe ágyazva.  
+      
 ### 8.3 Változások kezelése
-     
+  
+Az interfész változása esetén mind a szerver mind a kliens oldalon szükséges módosítani a szoftvereket annak érdekében, hogy továbbra is együtt
+ tudjon működni a rendszer. Ha a változás nem érinti a szerver-kliens interfészt, például csak a felhasználói felületet kívánjuk módosítani,
+ elegendő a React kliens kódját változtatni.  
+        
 ## 9. Adatbázisterv  
        
 ### 9.1 Logikai adatmodell 
