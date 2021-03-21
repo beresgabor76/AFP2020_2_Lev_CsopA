@@ -301,9 +301,9 @@ const userSchema = new mongoose.Schema({
 &nbsp;&nbsp;&nbsp;&nbsp;    type: Array,  
 &nbsp;&nbsp;&nbsp;&nbsp;    validate: {  
 &nbsp;&nbsp;&nbsp;&nbsp;      validator: function(v) {  
-&nbsp;&nbsp;&nbsp;&nbsp;        return v.length > 0 && v.every(function(e) { return typeof(e) == 'string'; });  
-&nbsp;&nbsp;&nbsp;&nbsp;      },  
-&nbsp;&nbsp;&nbsp;&nbsp;      message: 'Languages must be set.'  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        return v.length > 0 && v.every(function(e) { return typeof(e) == 'string'; });  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      },  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      message: 'Languages must be set.'  
 &nbsp;&nbsp;&nbsp;&nbsp;    }  
 &nbsp;&nbsp;  },  
 &nbsp;&nbsp;  uploads: {  
