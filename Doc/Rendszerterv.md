@@ -185,14 +185,6 @@ Szerzői jogi törvény (1999. évi LXXVI. törvény; röviden: Szjt.), illetve 
    
 ### 5.3 Határ osztályok 
   
-#### Az olvasó felhasználói tevékenységeihez kapcsolódó határosztályok
-   
-#### A könyvtáros felhasználói tevékenységeihez kapcsolódó határosztályok  
-   
-#### A könyvtáros felhasználó könyvkölcsönzési tevékenységeihez kapcsolódó határosztályok
-   
-#### A könyvtáros adminisztrátor kiegészítő felhasználói tevékenységeihez kapcsolódó határosztályok
-    
 ### 5.4 Menühierarchiák 
    
 ### 5.5 Képernyőtervek  
@@ -226,16 +218,16 @@ Szoftverkomponensek vásárlása nem szükséges.
    
 ## 8. Architekturális terv
   
-REST (Representational State Transfer) típusú architektúra, mely kliensekből és egy szerverből áll. A kliensek kéréseket indítanak a szerverek felé,
+REST (Representational State Transfer) típusú architektúra, mely kliensekből és egy szerverből áll. A kliensek kéréseket indítanak a szerver felé,
  a szerver kéréseket dolgoz fel és a megfelelő választ visszaküldi. Azaz a kérések és a válaszok erőforrás-reprezentációk szállítása köré 
  épülnek. Más szavakkal: a REST egy egyszerű módszer arra, hogy kapcsolatot építsünk ki két független rendszer között. 100%-ban HTTP protokollra 
  épül, annak minden tulajdonságát kihasználja.  
     
 ### 8.1 Architekturális tervezési minta
-  
-A kliensek el vannak különítve a szerverektől egy egységes interfész által, azaz a kliensek nem foglalkoznak adattárolással, ami a szerver feladata,
- és így a kliens kód hordozhatósága megnő. A szerverek nem foglalkoznak a felhasználói felülettel vagy a kliens állapotával, ezért a szerverek
- egyszerűbbek és még skálázhatóbbak lehetnek. A szerverek és kliensek áthelyezhetőek és fejleszthetőek külön-külön is, egészen addig amíg 
+       
+A kliensek el vannak különítve a szervertől egy egységes interfész által, azaz a kliensek nem foglalkoznak adattárolással, ami a szerver feladata,
+ és így a kliens kód hordozhatósága megnő. A szerver nem foglalkozik a felhasználói felülettel vagy a kliens állapotával, ezért a szerver
+ egyszerűbb és még skálázhatóbb lehet. A szerver és a kliensek áthelyezhetőek és fejleszthetőek külön-külön is, egészen addig amíg 
  az interfész nem változik meg.  
   
 A kliens-szerver kommunikáció további korlátja: a szerveren nem tárolják a kliens állapotát a kérések között. Minden egyes kérés bármelyik klienstől
@@ -243,8 +235,14 @@ A kliens-szerver kommunikáció további korlátja: a szerveren nem tárolják a
     
 ### 8.2 Az alkalmazás rétegei, fő komponensei, ezek kapcsolatai
   
+Adatbázis szerver (Adatbázis) <-------> Webszerver (Szerver, Üzleti logika) <-------> Kliens (Felhasználói felület):  
+    
 A szerver egy ún. REST API, mely Javascript nyelven íródik a Node.js szoftverrendszer felhasználásával, melyet skálázható internetes alkalmazások,
  mégpedig webszerverek készítésére hoztak létre eseményalapú, aszinkron I/O-val a túlterhelés minimalizálására és a skálázhatóság maximalizálására.  
+ 
+Az adatbázis szerver MongoDB nyílt forráskódú dokumentumorientált adatbázis szoftver, mely a REST API szerverrel áll kapcsolatban. Az adatok
+ tárolását, lekérdezését, módosítását és törlését a szerver egy ún. 'mongoose' Node.js modul segítségével végzi, mely egyszerű felületet biztosít
+ a programozók számára.  
    
 A kliens szintén Javascript nyelven íródik, React könyvtárak felhasználásával, mely interaktív felhasználói felületek egyszerű készítésére szolgál. 
  Minden állapothoz egy nézetet tudunk rendelni az alkalmazásban, melyeket az állapotok, adatok változása esetén a React frissít és renderel a böngészőben. 
@@ -258,12 +256,138 @@ Az interfész változása esetén mind a szerver mind a kliens oldalon szükség
  elegendő a React kliens kódját változtatni.  
         
 ## 9. Adatbázisterv  
-       
-### 9.1 Logikai adatmodell 
     
+Az adatbáziskezelő rendszer ún. NoSQL, más néven "not only SQL" adatbáziskezelő. A MongoDB nyílt forráskódú dokumentumorientált adatbázis szoftver,
+  amelyet a MongoDB inc. fejleszt. A dokumentumokat JSON-szerű formátumban tárolja (BSON). Mint a legtöbb NoSQL szoftver, a MongoDB sem képes
+  ACID viselkedést biztosítani, azonban esetünkben az adatbázis egyszerűsége miatt ez nem jelent problémát. Ellenben a dokumentumok
+  gyors kereshetősége előnyt biztosít egy hagyományos SQL adatbázissal szemben.  
+  
+### 9.1 Logikai adatmodell 
+
+Az adatok tárolását, lekérdezését, módosítását és törlését a szerver egy ún. 'mongoose' Node.js modul segítségével végzi a MongoDB adatbázisban.
+ Az egyes dokumentumokhoz létre lehet hozni egy ún. sémát, mely az adatok tárolását ellenőrzött módon teszi lehetővé, validálást is biztosítva.
+ Az adatbáziskezelő az azonos sémához tartozó dokumentumokat ún. kollekciókban (collection) tárolja, melyek az adatbázis részei. Két kollekció
+ szükséges az alkalmazásunk adatainak tárolására: egy a felhasználók belépéséhez és adminisztrációjához szükséges adatait tároló dokumentumokat
+ tartalmazó 'users' és egy a dalszövegek adatainak tárolására szolgáló 'lyrics' kollekció.  
+
+Az egyes sémák, melyek a REST API kódjában vannak tárolva:  
+  
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    minlength: 5,
+    maxlength: 50,
+    unique: true
+  },
+  email: {
+    type: String,
+    required: true,
+    minlength: 10,
+    maxlength: 100,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true,
+    minlength: 10,
+    maxlength: 1024
+  },
+  admin: {
+    type: Boolean,
+    default: false
+  },
+  languages: {
+    type: Array,
+    validate: {
+      validator: function(v) {
+        return v.length > 0 && v.every(function(e) { return typeof(e) == 'string'; });
+      },
+      message: 'Languages must be set.'
+    }
+  },
+  uploads: {
+    type: Number,
+    default: 0  
+  }
+});
+   
+const lyricsSchema = new mongoose.Schema({
+    artist: {
+        type: String,
+        required: true,
+        minlength: 2,
+        maxlength: 50        
+    },
+    title: {
+        type: String,
+        required: true,
+        minlength: 3,
+        maxlength: 100        
+    },
+    album: {
+        type: String,        
+        maxlength: 100        
+    },
+    language: {
+        type: String,
+        required: true,
+        minlength: 3,
+        maxlength: 50        
+    },
+    lyricsOriginal: {
+        type: String,
+        required: true,
+        minlength: 50,
+        maxlength: 5000        
+    },
+    lyricsHungarian: {
+        type: String,
+        required: true,
+        minlength: 50,
+        maxlength: 5000        
+    },
+    uploader: {
+        type: String,
+        required: true,
+        minlength: 5,
+        maxlength: 50        
+    },
+    inspector: {
+        type: String,        
+        minlength: 5,
+        maxlength: 50        
+    },
+    approved: {
+        type: Boolean,
+        default: false
+    },
+    refused: {
+        type: Boolean,
+        default: false
+    },
+    remark: {
+        type: String,                
+        maxlength: 500        
+    },
+    dateOfUpload: {
+        type: Date                
+    },
+    timesOfDownload: {
+        type: Number,
+        default: 0
+    }
+});	
+	
 ### 9.2 Tárolt eljárások 
+  
+A MongoDB adatbáziskezelő rendszer nem teszi lehetővé tárolt eljárások alkalmazását, azonban ez nem is szükséges, a mongoose modul segítségével
+ rugalmasan lehet kezelni az adatbázisban tárolt adatokat.  
     
 ### 9.3 Fizikai adatmodellt legeneráló SQL szkript   
+  
+A MongoDB adatbáziskezelő esetén nincs szükség előzetesen létrehozni az adatbázist és a kollekciókat, az első dokumentumok mentésekor megteszi
+ ezt helyettünk.  
     
 ## 10. Implementációs terv
    
