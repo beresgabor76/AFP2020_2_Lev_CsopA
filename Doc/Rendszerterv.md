@@ -273,110 +273,110 @@ Az adatok tárolását, lekérdezését, módosítását és törlését a szerv
 Az egyes sémák, melyek a REST API kódjában vannak tárolva:  
   
 const userSchema = new mongoose.Schema({  
-  name: {  
-    type: String,  
-    required: true,  
-    minlength: 5,  
-    maxlength: 50,  
-    unique: true  
-  },  
-  email: {  
-    type: String,  
-    required: true,  
-    minlength: 10,  
-    maxlength: 100,  
-    unique: true  
-  },  
-  password: {  
-    type: String,  
-    required: true,  
-    minlength: 10,  
-    maxlength: 1024  
-  },  
-  admin: {  
-    type: Boolean,  
-    default: false  
-  },  
-  languages: {  
-    type: Array,  
-    validate: {  
-      validator: function(v) {  
-        return v.length > 0 && v.every(function(e) { return typeof(e) == 'string'; });  
-      },  
-      message: 'Languages must be set.'  
-    }  
-  },  
-  uploads: {  
-    type: Number,  
-    default: 0   
-  }  
+&nbsp;&nbsp;  name: {  
+&nbsp;&nbsp;&nbsp;&nbsp;    type: String,  
+&nbsp;&nbsp;&nbsp;&nbsp;    required: true,  
+&nbsp;&nbsp;&nbsp;&nbsp;    minlength: 5,  
+&nbsp;&nbsp;&nbsp;&nbsp;    maxlength: 50,  
+&nbsp;&nbsp;&nbsp;&nbsp;    unique: true  
+&nbsp;&nbsp;  },  
+&nbsp;&nbsp;  email: {  
+&nbsp;&nbsp;&nbsp;&nbsp;    type: String,  
+&nbsp;&nbsp;&nbsp;&nbsp;    required: true,  
+&nbsp;&nbsp;&nbsp;&nbsp;    minlength: 10,  
+&nbsp;&nbsp;&nbsp;&nbsp;    maxlength: 100,  
+&nbsp;&nbsp;&nbsp;&nbsp;    unique: true  
+&nbsp;&nbsp;  },  
+&nbsp;&nbsp;  password: {  
+&nbsp;&nbsp;&nbsp;&nbsp;    type: String,  
+&nbsp;&nbsp;&nbsp;&nbsp;    required: true,  
+&nbsp;&nbsp;&nbsp;&nbsp;    minlength: 10,  
+&nbsp;&nbsp;&nbsp;&nbsp;    maxlength: 1024  
+&nbsp;&nbsp;  },  
+&nbsp;&nbsp;  admin: {  
+&nbsp;&nbsp;&nbsp;&nbsp;    type: Boolean,  
+&nbsp;&nbsp;&nbsp;&nbsp;    default: false  
+&nbsp;&nbsp;  },  
+&nbsp;&nbsp;  languages: {  
+&nbsp;&nbsp;&nbsp;&nbsp;    type: Array,  
+&nbsp;&nbsp;&nbsp;&nbsp;    validate: {  
+&nbsp;&nbsp;&nbsp;&nbsp;      validator: function(v) {  
+&nbsp;&nbsp;&nbsp;&nbsp;        return v.length > 0 && v.every(function(e) { return typeof(e) == 'string'; });  
+&nbsp;&nbsp;&nbsp;&nbsp;      },  
+&nbsp;&nbsp;&nbsp;&nbsp;      message: 'Languages must be set.'  
+&nbsp;&nbsp;&nbsp;&nbsp;    }  
+&nbsp;&nbsp;  },  
+&nbsp;&nbsp;  uploads: {  
+&nbsp;&nbsp;&nbsp;&nbsp;    type: Number,  
+&nbsp;&nbsp;&nbsp;&nbsp;    default: 0   
+&nbsp;&nbsp;  }  
 });  
     
 const lyricsSchema = new mongoose.Schema({  
-    artist: {  
-        type: String,  
-        required: true,  
-        minlength: 2,  
-        maxlength: 50         
-    },  
-    title: {  
-        type: String,  
-        required: true,  
-        minlength: 3,  
-        maxlength: 100         
-    },  
-    album: {  
-        type: String,         
-        maxlength: 100         
-    },  
-    language: {  
-        type: String,  
-        required: true,  
-        minlength: 3,  
-        maxlength: 50         
-    },  
-    lyricsOriginal: {  
-        type: String,  
-        required: true,  
-        minlength: 50,  
-        maxlength: 5000          
-    },  
-    lyricsHungarian: {  
-        type: String,  
-        required: true,  
-        minlength: 50,   
-        maxlength: 5000         
-    },  
-    uploader: {  
-        type: String,  
-        required: true,  
-        minlength: 5,  
-        maxlength: 50          
-    },  
-    inspector: {  
-        type: String,          
-        minlength: 5,  
-        maxlength: 50          
-    },  
-    approved: {  
-        type: Boolean,  
-        default: false  
-    },  
-    refused: {  
-        type: Boolean,  
-        default: false  
-    },  
-    remark: {  
-        type: String,                  
-        maxlength: 500          
-    },  
-    dateOfUpload: {  
-        type: Date                  
-    },  
-    timesOfDownload: {  
-        type: Number,  
-        default: 0  
-    }  
+&nbsp;&nbsp;    artist: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: String,  
+&nbsp;&nbsp;&nbsp;&nbsp;        required: true,  
+&nbsp;&nbsp;&nbsp;&nbsp;        minlength: 2,  
+&nbsp;&nbsp;&nbsp;&nbsp;        maxlength: 50         
+&nbsp;&nbsp;    },  
+&nbsp;&nbsp;    title: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: String,  
+&nbsp;&nbsp;&nbsp;&nbsp;        required: true,  
+&nbsp;&nbsp;&nbsp;&nbsp;        minlength: 3,  
+&nbsp;&nbsp;&nbsp;&nbsp;        maxlength: 100         
+&nbsp;&nbsp;    },  
+&nbsp;&nbsp;    album: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: String,         
+&nbsp;&nbsp;&nbsp;&nbsp;        maxlength: 100         
+&nbsp;&nbsp;    },  
+&nbsp;&nbsp;    language: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: String,  
+&nbsp;&nbsp;&nbsp;&nbsp;       required: true,  
+&nbsp;&nbsp;&nbsp;&nbsp;        minlength: 3,  
+&nbsp;&nbsp;&nbsp;&nbsp;        maxlength: 50         
+&nbsp;&nbsp;    },  
+&nbsp;&nbsp;    lyricsOriginal: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: String,  
+&nbsp;&nbsp;&nbsp;&nbsp;        required: true,  
+&nbsp;&nbsp;&nbsp;&nbsp;        minlength: 50,  
+&nbsp;&nbsp;&nbsp;&nbsp;        maxlength: 5000          
+&nbsp;&nbsp;    },  
+&nbsp;&nbsp;    lyricsHungarian: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: String,  
+&nbsp;&nbsp;&nbsp;&nbsp;        required: true,  
+&nbsp;&nbsp;&nbsp;&nbsp;        minlength: 50,   
+&nbsp;&nbsp;&nbsp;&nbsp;        maxlength: 5000         
+&nbsp;&nbsp;    },  
+&nbsp;&nbsp;    uploader: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: String,  
+&nbsp;&nbsp;&nbsp;&nbsp;        required: true,  
+&nbsp;&nbsp;&nbsp;&nbsp;        minlength: 5,  
+&nbsp;&nbsp;&nbsp;&nbsp;        maxlength: 50          
+&nbsp;&nbsp;    },  
+&nbsp;&nbsp;    inspector: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: String,          
+&nbsp;&nbsp;&nbsp;&nbsp;        minlength: 5,  
+&nbsp;&nbsp;&nbsp;&nbsp;        maxlength: 50          
+&nbsp;&nbsp;    },  
+&nbsp;&nbsp;    approved: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: Boolean,  
+&nbsp;&nbsp;&nbsp;&nbsp;        default: false  
+&nbsp;&nbsp;    },  
+&nbsp;&nbsp;    refused: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: Boolean,  
+&nbsp;&nbsp;&nbsp;&nbsp;        default: false  
+&nbsp;&nbsp;    },  
+&nbsp;&nbsp;    remark: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: String,                  
+&nbsp;&nbsp;&nbsp;&nbsp;        maxlength: 500          
+&nbsp;&nbsp;    },  
+&nbsp;&nbsp;    dateOfUpload: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: Date                  
+&nbsp;&nbsp;   },  
+&nbsp;&nbsp;    timesOfDownload: {  
+&nbsp;&nbsp;&nbsp;&nbsp;        type: Number,  
+&nbsp;&nbsp;&nbsp;&nbsp;        default: 0  
+&nbsp;&nbsp;    }  
 });	  
 	
 ### 9.2 Tárolt eljárások 
