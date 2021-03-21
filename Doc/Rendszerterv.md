@@ -272,112 +272,112 @@ Az adatok tárolását, lekérdezését, módosítását és törlését a szerv
 
 Az egyes sémák, melyek a REST API kódjában vannak tárolva:  
   
-const userSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-    minlength: 5,
-    maxlength: 50,
-    unique: true
-  },
-  email: {
-    type: String,
-    required: true,
-    minlength: 10,
-    maxlength: 100,
-    unique: true
-  },
-  password: {
-    type: String,
-    required: true,
-    minlength: 10,
-    maxlength: 1024
-  },
-  admin: {
-    type: Boolean,
-    default: false
-  },
-  languages: {
-    type: Array,
-    validate: {
-      validator: function(v) {
-        return v.length > 0 && v.every(function(e) { return typeof(e) == 'string'; });
-      },
-      message: 'Languages must be set.'
-    }
-  },
-  uploads: {
-    type: Number,
-    default: 0  
-  }
-});
-   
-const lyricsSchema = new mongoose.Schema({
-    artist: {
-        type: String,
-        required: true,
-        minlength: 2,
-        maxlength: 50        
-    },
-    title: {
-        type: String,
-        required: true,
-        minlength: 3,
-        maxlength: 100        
-    },
-    album: {
-        type: String,        
-        maxlength: 100        
-    },
-    language: {
-        type: String,
-        required: true,
-        minlength: 3,
-        maxlength: 50        
-    },
-    lyricsOriginal: {
-        type: String,
-        required: true,
-        minlength: 50,
-        maxlength: 5000        
-    },
-    lyricsHungarian: {
-        type: String,
-        required: true,
-        minlength: 50,
-        maxlength: 5000        
-    },
-    uploader: {
-        type: String,
-        required: true,
-        minlength: 5,
-        maxlength: 50        
-    },
-    inspector: {
-        type: String,        
-        minlength: 5,
-        maxlength: 50        
-    },
-    approved: {
-        type: Boolean,
-        default: false
-    },
-    refused: {
-        type: Boolean,
-        default: false
-    },
-    remark: {
-        type: String,                
-        maxlength: 500        
-    },
-    dateOfUpload: {
-        type: Date                
-    },
-    timesOfDownload: {
-        type: Number,
-        default: 0
-    }
-});	
+const userSchema = new mongoose.Schema({  
+  name: {  
+    type: String,  
+    required: true,  
+    minlength: 5,  
+    maxlength: 50,  
+    unique: true  
+  },  
+  email: {  
+    type: String,  
+    required: true,  
+    minlength: 10,  
+    maxlength: 100,  
+    unique: true  
+  },  
+  password: {  
+    type: String,  
+    required: true,  
+    minlength: 10,  
+    maxlength: 1024  
+  },  
+  admin: {  
+    type: Boolean,  
+    default: false  
+  },  
+  languages: {  
+    type: Array,  
+    validate: {  
+      validator: function(v) {  
+        return v.length > 0 && v.every(function(e) { return typeof(e) == 'string'; });  
+      },  
+      message: 'Languages must be set.'  
+    }  
+  },  
+  uploads: {  
+    type: Number,  
+    default: 0   
+  }  
+});  
+    
+const lyricsSchema = new mongoose.Schema({  
+    artist: {  
+        type: String,  
+        required: true,  
+        minlength: 2,  
+        maxlength: 50         
+    },  
+    title: {  
+        type: String,  
+        required: true,  
+        minlength: 3,  
+        maxlength: 100         
+    },  
+    album: {  
+        type: String,         
+        maxlength: 100         
+    },  
+    language: {  
+        type: String,  
+        required: true,  
+        minlength: 3,  
+        maxlength: 50         
+    },  
+    lyricsOriginal: {  
+        type: String,  
+        required: true,  
+        minlength: 50,  
+        maxlength: 5000          
+    },  
+    lyricsHungarian: {  
+        type: String,  
+        required: true,  
+        minlength: 50,   
+        maxlength: 5000         
+    },  
+    uploader: {  
+        type: String,  
+        required: true,  
+        minlength: 5,  
+        maxlength: 50          
+    },  
+    inspector: {  
+        type: String,          
+        minlength: 5,  
+        maxlength: 50          
+    },  
+    approved: {  
+        type: Boolean,  
+        default: false  
+    },  
+    refused: {  
+        type: Boolean,  
+        default: false  
+    },  
+    remark: {  
+        type: String,                  
+        maxlength: 500          
+    },  
+    dateOfUpload: {  
+        type: Date                  
+    },  
+    timesOfDownload: {  
+        type: Number,  
+        default: 0  
+    }  
+});	  
 	
 ### 9.2 Tárolt eljárások 
   
