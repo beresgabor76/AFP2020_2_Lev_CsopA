@@ -245,7 +245,7 @@ A MERN betűszó a MongoDB, Express, React, Node szavak kezdőbetűiből áll, a
 - React(.js): a kliens oldali JavaScript keretrendszer
 - Node(.js): JavaScript webszerver
   
-The MERN architektúra lehetővé teszi, hogy könnyen létrehozzunk egy 3-rétegű architektúrát: frontend<-->backend<-->adatbázis vagy
+The MERN architektúra lehetővé teszi, hogy könnyen létrehozzunk egy 3-rétegű architektúrát: frontend<-->backend<-->adatbázis vagy másként
  felhasználói felület<-->üzleti logika<-->adatbázis, amely kizárólag a JavaScript-re és JSON-ra épül.  
   
 ### React JS  
@@ -254,7 +254,7 @@ A MERN stack legfelső rétege a React.js, egy deklaratív JavaScript nyelvű ke
  szolgál HTML-ben. Komplex felhasználói felületek hozhatók létre benne a React modulok felhasználásával és egyszerű komponensek segítségével,
  melyeket a backend szerver adataihoz lehet kapcsolni. A deklaratív nézetek a kódot jobban áttekinthetővé teszik és könnyebb a hibakeresés bennük. 
  
-## Express.js és Node.js szerver réteg
+### Express.js és Node.js szerver réteg
 
 A szerver esetünkben egy ún. REST API, mely szintén Javascript nyelven íródik a Node.js szoftverrendszer felhasználásával, melyet skálázható
  internetes alkalmazások, mégpedig webszerverek készítésére hoztak létre eseményalapú, aszinkron I/O-val a túlterhelés minimalizálására és
@@ -266,12 +266,12 @@ Ebben a rétegben helyezkedik el az Express.js szerver oldali keretrendszer, ame
   
 ### MongoDB adatbázis réteg   
   
-Az adatbázis szerver MongoDB nyílt forráskódú dokumentumorientált adatbázis szoftver, mely a REST API szerverrel áll kapcsolatban.
+Az adatbázis szerver MongoDB nyílt forráskódú dokumentumorientált adatbázis szoftver, mely a REST API szerverrel áll kapcsolatban. 
  A MongoDB-t arra tervezték, hogy a JSON adatokat natív módon tárolja - technikailag a JSON BSON nevű bináris változatát használja -,
  és a parancssori felületétől a lekérdezési nyelvig (MQL vagy MongoDB Query Language) minden a JSON-ra és a JavaScript-re épül.
- A MongoDB rendkívül jól működik a Node.js-sel, és hihetetlenül egyszerűvé teszi JSON-adatok tárolását, kezelését és ábrázolását
- az alkalmazás minden szintjén. Az adatok tárolását, lekérdezését, módosítását és törlését a szerver egy ún. 'mongoose' Node.js modul
- segítségével végzi, mely egyszerű felületet biztosít a programozók számára.  
+ A MongoDB rendkívül jól működik a Node.js-szel, és egyszerűvé teszi JSON-adatok tárolását, kezelését és ábrázolását az alkalmazás
+ minden szintjén. Az adatok tárolását, lekérdezését, módosítását és törlését a szerver egy ún. 'mongoose' Node.js modul segítségével
+ végzi, mely egyszerű felületet biztosít a programozók számára.  
     
 ### 8.3 Változások kezelése
   
@@ -291,8 +291,8 @@ Az adatbáziskezelő rendszer ún. NoSQL, más néven "not only SQL" adatbázisk
 Az adatok tárolását, lekérdezését, módosítását és törlését a szerver egy ún. 'mongoose' Node.js modul segítségével végzi a MongoDB adatbázisban.
  Az egyes dokumentumokhoz létre lehet hozni egy ún. sémát, mely az adatok tárolását ellenőrzött módon teszi lehetővé, validálást is biztosítva.
  Az adatbáziskezelő az azonos sémához tartozó dokumentumokat ún. kollekciókban (collection) tárolja, melyek az adatbázis részei. Két kollekció
- szükséges az alkalmazásunk adatainak tárolására: egy a felhasználók belépéséhez és adminisztrációjához szükséges adatait tároló dokumentumokat
- tartalmazó 'users' és egy a dalszövegek adatainak tárolására szolgáló 'lyrics' kollekció.  
+ szükséges az alkalmazásunk adatainak tárolására: egy a felhasználók belépéséhez és adminisztrációjához szükséges adatokat tároló dokumentumokat
+ tartalmazó 'users' és egy a dalszövegek adatait tartalmazó dokumentumok tárolására szolgáló 'lyrics' kollekció.  
 
 Az egyes sémák, melyek a REST API kódjában vannak tárolva:  
   
