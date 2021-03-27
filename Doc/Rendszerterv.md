@@ -270,7 +270,7 @@ Az adatbázis szerver MongoDB nyílt forráskódú dokumentumorientált adatbáz
  A MongoDB-t arra tervezték, hogy a JSON adatokat natív módon tárolja - technikailag a JSON BSON nevű bináris változatát használja -,
  és a parancssori felületétől a lekérdezési nyelvig (MQL vagy MongoDB Query Language) minden a JSON-ra és a JavaScript-re épül.
  A MongoDB rendkívül jól működik a Node.js-szel, és egyszerűvé teszi JSON-adatok tárolását, kezelését és ábrázolását az alkalmazás
- minden szintjén. Az adatok tárolását, lekérdezését, módosítását és törlését a szerver egy ún. 'mongoose' Node.js modul segítségével
+ minden szintjén. Az adatok tárolását, lekérdezését, módosítását és törlését a REST API egy ún. 'mongoose' Node.js modul segítségével
  végzi, mely egyszerű felületet biztosít a programozók számára.  
     
 ### 8.3 Változások kezelése
@@ -282,7 +282,7 @@ Az interfész változása esetén mind a szerver mind a kliens oldalon szükség
 ## 9. Adatbázisterv  
     
 Az adatbáziskezelő rendszer ún. NoSQL, más néven "not only SQL" adatbáziskezelő. A MongoDB nyílt forráskódú dokumentumorientált adatbázis szoftver,
-  amelyet a MongoDB inc. fejleszt. A dokumentumokat JSON-szerű formátumban tárolja (BSON). Mint a legtöbb NoSQL szoftver, a MongoDB sem képes
+  amelyet a fentiekben, a 8.2 pontban már ismertettünk nagy vonalakban. Mint a legtöbb NoSQL szoftver, a MongoDB sem képes
   ACID viselkedést biztosítani, azonban esetünkben az adatbázis egyszerűsége miatt ez nem jelent problémát. Ellenben a dokumentumok
   gyors kereshetősége előnyt biztosít egy hagyományos SQL adatbázissal szemben.  
   
@@ -292,11 +292,11 @@ Az adatok tárolását, lekérdezését, módosítását és törlését a szerv
  Az egyes dokumentumokhoz létre lehet hozni egy ún. sémát, mely az adatok tárolását ellenőrzött módon teszi lehetővé, validálást is biztosítva.
  Az adatbáziskezelő az azonos sémához tartozó dokumentumokat ún. kollekciókban (collection) tárolja, melyek az adatbázis részei. Két kollekció
  szükséges az alkalmazásunk adatainak tárolására: egy a felhasználók belépéséhez és adminisztrációjához szükséges adatokat tároló dokumentumokat
- tartalmazó 'users' és egy a dalszövegek adatait tartalmazó dokumentumok tárolására szolgáló 'lyrics' kollekció.  
+ tartalmazó 'users' és egy a dalszövegek adatainak tárolására szolgáló dokumentumokat tartalmazó 'lyrics' kollekció.  
 
 Az egyes sémák, melyek a REST API kódjában vannak tárolva:  
   
-const userSchema = new mongoose.Schema({  
+const **userSchema** = new mongoose.Schema({  
 &nbsp;&nbsp;  name: {  
 &nbsp;&nbsp;&nbsp;&nbsp;    type: String,  
 &nbsp;&nbsp;&nbsp;&nbsp;    required: true,  
@@ -336,7 +336,7 @@ const userSchema = new mongoose.Schema({
 &nbsp;&nbsp;  }  
 });  
     
-const lyricsSchema = new mongoose.Schema({  
+const **lyricsSchema** = new mongoose.Schema({  
 &nbsp;&nbsp;    artist: {  
 &nbsp;&nbsp;&nbsp;&nbsp;        type: String,  
 &nbsp;&nbsp;&nbsp;&nbsp;        required: true,  
