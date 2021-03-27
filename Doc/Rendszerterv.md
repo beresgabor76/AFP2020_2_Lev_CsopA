@@ -234,21 +234,45 @@ A kliens-szerver kommunikáció további korlátja: a szerveren nem tárolják a
  tartalmazza az összes szükséges információt a kérés kiszolgálásához, és minden állapotot a kliens tárol.  
     
 ### 8.2 Az alkalmazás rétegei, fő komponensei, ezek kapcsolatai
-  
-Adatbázis szerver (Adatbázis) <-------> Webszerver (Szerver, Üzleti logika) <-------> Kliens (Felhasználói felület):  
-    
-A szerver egy ún. REST API, mely Javascript nyelven íródik a Node.js szoftverrendszer felhasználásával, melyet skálázható internetes alkalmazások,
- mégpedig webszerverek készítésére hoztak létre eseményalapú, aszinkron I/O-val a túlterhelés minimalizálására és a skálázhatóság maximalizálására.  
- 
-Az adatbázis szerver MongoDB nyílt forráskódú dokumentumorientált adatbázis szoftver, mely a REST API szerverrel áll kapcsolatban. Az adatok
- tárolását, lekérdezését, módosítását és törlését a szerver egy ún. 'mongoose' Node.js modul segítségével végzi, mely egyszerű felületet biztosít
- a programozók számára.  
    
-A kliens szintén Javascript nyelven íródik, React könyvtárak felhasználásával, mely interaktív felhasználói felületek egyszerű készítésére szolgál. 
- Minden állapothoz egy nézetet tudunk rendelni az alkalmazásban, melyeket az állapotok, adatok változása esetén a React frissít és renderel a böngészőben. 
- A deklaratív nézetek a kódot jobban áttekinthetővé teszik és könnyebb a hibakeresés benne. A React kliens egységbe zárt komponenseket tartalmaz,
- melyek önállóan menedzselik saját állapotukat, az egyes nézetekbe ágyazva.  
-      
+### MERN stack
+
+![MERN](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/mern-stack.png)
+
+A MERN betűszó a MongoDB, Express, React, Node szavak kezdőbetűiből áll, a négy kulcs technológia után, melyek a stack-et alkotják:
+- MongoDB: dokumentum alapú adatbázis
+- Express(.js): Node.js web keretrendszer
+- React(.js): a kliens oldali JavaScript keretrendszer
+- Node(.js): JavaScript webszerver
+  
+The MERN architektúra lehetővé teszi, hogy könnyen létrehozzunk egy 3-rétegű architektúrát: frontend<-->backend<-->adatbázis vagy
+ felhasználói felület<-->üzleti logika<-->adatbázis, amely kizárólag a JavaScript-re és JSON-ra épül.  
+  
+### React JS  
+  
+A MERN stack legfelső rétege a React.js, egy deklaratív JavaScript nyelvű keretrendszer, mely dinamikus kliens oldali alkalmazások létrehozására
+ szolgál HTML-ben. Komplex felhasználói felületek hozhatók létre benne a React modulok felhasználásával és egyszerű komponensek segítségével,
+ melyeket a backend szerver adataihoz lehet kapcsolni. A deklaratív nézetek a kódot jobban áttekinthetővé teszik és könnyebb a hibakeresés bennük. 
+ 
+## Express.js és Node.js szerver réteg
+
+A szerver esetünkben egy ún. REST API, mely szintén Javascript nyelven íródik a Node.js szoftverrendszer felhasználásával, melyet skálázható
+ internetes alkalmazások, mégpedig webszerverek készítésére hoztak létre eseményalapú, aszinkron I/O-val a túlterhelés minimalizálására és
+ a skálázhatóság maximalizálására.  
+  
+Ebben a rétegben helyezkedik el az Express.js szerver oldali keretrendszer, amely a Node.js szerveren belül fut. Az Express.js hatékony
+ modellekkel rendelkezik az URL-útválasztáshoz - a bejövő URL megfeleltetéséhez egy szerver funkcióval -, valamint a HTTP kérések és válaszok
+ kezeléséhez.
+  
+### MongoDB adatbázis réteg   
+  
+Az adatbázis szerver MongoDB nyílt forráskódú dokumentumorientált adatbázis szoftver, mely a REST API szerverrel áll kapcsolatban.
+ A MongoDB-t arra tervezték, hogy a JSON adatokat natív módon tárolja - technikailag a JSON BSON nevű bináris változatát használja -,
+ és a parancssori felületétől a lekérdezési nyelvig (MQL vagy MongoDB Query Language) minden a JSON-ra és a JavaScript-re épül.
+ A MongoDB rendkívül jól működik a Node.js-sel, és hihetetlenül egyszerűvé teszi JSON-adatok tárolását, kezelését és ábrázolását
+ az alkalmazás minden szintjén. Az adatok tárolását, lekérdezését, módosítását és törlését a szerver egy ún. 'mongoose' Node.js modul
+ segítségével végzi, mely egyszerű felületet biztosít a programozók számára.  
+    
 ### 8.3 Változások kezelése
   
 Az interfész változása esetén mind a szerver mind a kliens oldalon szükséges módosítani a szoftvereket annak érdekében, hogy továbbra is együtt
