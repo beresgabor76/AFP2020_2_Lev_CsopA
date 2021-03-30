@@ -92,9 +92,10 @@ tartalmazó oldal.  Amennyiben nem találaható a feltételeknek megfelelő tart
 Sikeres keresést követően *A dalszöveg megjelenítése* oldalon  látható a jól ismert kép mellett a dalszöveg eredeti nyelvű
 szövege, illetve magyar nyelvű fordítása. Erről az oldalról nem lehet tovább navigálni.
 
-*A dalszöveg feltöltése a gyűjteménybe* oldal a bejelentkezést követően kerül betöltésre. Itt szükséges megadni a dal címét,
-előadóját, eredeti és magyar nyelvű szövegét, amit egy-egy fájl feltöltésével lehet megvalósítani. A fetöltött anyagok csak
-jóváhagyást követően érhetők el. Erről az oldalról nincs lehetőség tovább navigálni.
+*A dalszöveg feltöltése a gyűjteménybe* oldal a bejelentkezést követően kerül betöltésre. Itt szükséges megadni az albumot,a dal 
+címét, előadóját, eredeti és magyar nyelvű szövegét, amit a szövegek az eredeti és a fordítás kivitelezés szerinti szövegmezőkre 
+való feltöltésével lehet megvalósítani. A fetöltött anyagok csakjóváhagyást követően érhetők el. Erről az oldalról nincs lehetőség
+tovább navigálni.
 
 *Regisztráció dalszövegek feltöltéséhez* oldalon regisztrációhoz minimálisan szükséges adatok megadására van szükség, amelyek az
 e-mail cím, azonosító(megjelenített név), jelszó, megadására szorítkoznak. A regisztráció nyomógombot megnyomva a felhasználó
