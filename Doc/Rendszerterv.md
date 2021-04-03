@@ -261,7 +261,25 @@ Szerzői jogi törvény (1999. évi LXXVI. törvény; röviden: Szjt.), illetve 
 ### 5.1 Rendszerszereplők
 A rendszerünkben két rendszerszereplő csoportot különböztetünk meg. Az egyik dalszövegeket feltöltők csoportja. A másik az adminisztrátori feladatokat végzők csoportja. A regisztrációval rendelkező feltöltőknek van jogosultságuk dalokat hozzáadni az adatbázishoz. Az adminisztrátorok rendelkeznek olyan jogosultsággal, hogy elfogadják vagy visszautasítsák a feltöltött dalszövegeket.
 ### 5.2 Rendszerhasználati esetek és lefutásaik 
-   
+
+![ujfelhasznreg_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/ujfelhasznreg.png)
+
+![felhaszbejel_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/felhaszbejel.png)
+
+![ujdalfelv_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/ujdalfelv.png)
+
+![dalszjav_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/dalszjav.png)
+
+![adminreg_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/adminreg.png)
+
+![adminell_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/adminell.png)
+
+![lejhattorl_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/lejhattorl.png)
+
+![kereses_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/kereses.png)
+
+![megtekintes_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/megtekintes.png)
+
 ### 5.3 Határ osztályok 
   
 ### 5.4 Menühierarchiák 
