@@ -259,7 +259,7 @@ Szerzői jogi törvény (1999. évi LXXVI. törvény; röviden: Szjt.), illetve 
 ## 5. Funkcionális terv
   
 ### 5.1 Rendszerszereplők
-   
+A rendszerünkben három rendszerszereplő csoportot különböztetünk meg. Az egyik dalszövegeket feltöltők csoportja. A másik az adminisztrátori feladatokat végzők csoportja. A regisztrációval rendelkező feltöltőknek jogosultságuk dalokat hozzáadni az adatbázishoz. Az adminisztrátorok rendelkeznek jogosultsággal, hogy elfogadják vagy visszautasítsák a feltöltött dalszövegeket.
 ### 5.2 Rendszerhasználati esetek és lefutásaik 
    
 ### 5.3 Határ osztályok 
