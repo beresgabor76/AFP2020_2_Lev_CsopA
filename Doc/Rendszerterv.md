@@ -280,8 +280,19 @@ A rendszerünkben két rendszerszereplő csoportot különböztetünk meg. Az eg
 
 ![megtekintes_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/megtekintes.png)
 
-### 5.3 Határ osztályok 
-  
+### 5.3 Határ osztályok
+
+Applikációban nem hoztunk létere osztályokat, ezért ebben a pontban az egyes kapcsolódó nézeteket mutatjuk be.
+
+A belépés nélküli felhasználói tevékenységeihez kapcsolódó nézetek
+![withoutlogin_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/withoutlogin.png)
+
+A belépett felhasználói tevékenységeihez kapcsolódó nézetek
+![withlogin_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/withlogin.png)
+
+A belépett adminisztátori tevékenységeihez kapcsolódó nézetek
+![withadminlogin_picture](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/withadminlogin.png)
+
 ### 5.4 Menühierarchiák 
    
 ### 5.5 Képernyőtervek  
