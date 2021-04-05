@@ -89,23 +89,27 @@ Sikertelen belépési kísérletet hibaüzenet jelez.
   a rendszer üzenetet küld a sikerről, illetve a sikertelen regisztrációs kísérletről pl. ha már az e-mail használva volt akkor nem 
   lehetséges ugyanazzal a címmel történő regisztráció.  
   
-||Bejelentkezési név||  
-||E-mail cím||  
-||Jelszó||  
-||Jelszó megerősítés||  
-||Beszélt nyelvek||  
+ || Adatbeviteli mezők ||
+ |-|-------------------|-|
+ || Felhasználó név    ||  
+ || E-mail cím         ||  
+ || Jelszó             ||  
+ || Jelszó megerősítés ||  
+ || Beszélt nyelvek    ||  
   
-- Bejelentkezés a rendszerbe funkcióhoz a 'Bejelentkezés' menüponton keresztül lehet hozzáférni, itt a bejelentkezési név
+- Bejelentkezés a rendszerbe funkcióhoz a 'Bejelentkezés' menüponton keresztül lehet hozzáférni, itt a felhasználó név
   és jelszó megadása után a sikeres, illetve a sikertelen belépési kísérletről üzenetet küld a rendszer.
 - Feltöltés a rendszerbe funkció a 'Feltöltés' menüponton keresztül érhető el, itt az előadó, a dal címe, az album címe, a 
   dalszöveg eredeti nyelve, illetve az eredeti és a lefordított dalszöveg megadására van szükség a feltöltéshez.
    
-||Előadó||  
-||Cím||  
-||Album||  
-||Dalszöveg eredeti nyelve||  
-||Eredeti dalszöveg||  
-||Dalszöveg magyar nyelven||  
+ || Adatbeviteli mezők       ||
+ |-|-------------------------|-|
+ || Előadó                   ||  
+ || Cím                      ||  
+ || Album                    ||  
+ || Dalszöveg eredeti nyelve ||  
+ || Eredeti dalszöveg        ||  
+ || Dalszöveg magyar nyelven ||  
   
 Sikeres feltöltésről a '... előadó, ... zemeszám dalszövege sikeresen feltöltésre került!' üzenetet kapja a felhasználó, 
 sikeretelenség esetén pedig a 'Kérem töltsön ki minden mezőt az űrlapon!' hibaüzenetet.
@@ -123,11 +127,13 @@ sikeretelenség esetén pedig a 'Kérem töltsön ki minden mezőt az űrlapon!'
   Ezt követően  a rendszer üzenetet küld a sikerről, illetve a sikertelen regisztrációs kísérletről pl. ha már az e-mail 
   használva volt akkor nem lehetséges ugyanazzal a címmel történő regisztráció. 
   
-||Bejelentkezési név||  
-||E-mail cím||  
-||Jelszó||  
-||Jelszó megerősítés||  
-||Beszélt nyelvek||  
+ || Adatbeviteli mezők ||
+ |-|-------------------|-|
+ || Felhasználó név    ||  
+ || E-mail cím         ||  
+ || Jelszó             ||  
+ || Jelszó megerősítés ||  
+ || Beszélt nyelvek    ||   
 
 -Dalszöveg ellenőrzése lehetőséget nyújt a dalok jóvhagyására, illetve amennyiben javítani szükséges e célból történő visszautasítására.
  
@@ -141,11 +147,13 @@ Abban az esetben, ha a felhasználó nem adott meg  keresési feltételt, akkor 
 figyelmeztetést küldi számára, ha nem találja a keresési feltételnek megfelelő szöveget akkor a 'Nincs a keresési szempontnak 
 megfelelő dalszöveg' üzenetet olvashatja a felhasználó. Egyéb hiba esetén az 'Elnézést kérünk. Hiba történt a kiszolgáló oldalon.'
 figyelmeztetés látható. Feléve, hogy a user megtalálálta a keresett szöveget, akkor lehetősége nyílik ennek megtekintésére.
-  
-||Előadó||  
-||Cím||  
-||Album||  
-||Dalszöveg részlet||  
+
+ || Adatbeviteli mezők ||
+ |-|-------------------|-|
+ || Előadó             ||  
+ || Cím                ||  
+ || Album              ||  
+ || Dalszöveg részlet  ||  
   
  - Megtekintés:
 A kiválasztott dal eredeti és magyar nyelvű szövegét a felhasználó egymás mellett tudja megjeleníteni, a fordítások fölött szintén
