@@ -303,8 +303,45 @@ A belépett adminisztátori tevékenységeihez kapcsolódó nézetek
 
 ### 5.4 Menühierarchiák 
    
+A kliens oldali alkalmazásban minden funkció elérhető a navigációs sávokból. Attól függően, hogy egy felhasználó be van-e
+ jelentkezve, vagy nincs, különböző menü jelenik meg. A menüpontok nem tartalmaznak lenyíló menüket, mindegyikkel egy 
+ adott tevékenységet lehet kezdeményezni.  
+  
+ - **Anonim felhasználóként** a következő menüpontok érhetők el: *Kezdőlap, Keresés, Bejelentkezés, Regisztráció.* A Keresés menüponttal
+ lehet a dalszöveg adatbázisban keresni előadó, dal címe, album címe és dalszöveg részlet alapján. A Regisztráció menüponton 
+ keresztül feltöltőként regisztrálhat bárki, név, email cím, jelszó és beszélt nyelvek megadása kötelező.  
+ - Ha **feltöltőként** bejelentkezik egy felhasználó, a következő menüpontok érhetők el: *Kezdőlap, Keresés, Feltöltés, Javítás, Kijelentkezés.*
+ A Keresés menüpont a fentivel megegyező. A Feltöltés menüponton keresztül lehet új dalszöveget feltölteni az adatbázisba. A Javítás
+ menüpontban jelenik meg az ellenőrök által visszautasított, javításra szoruló dalszövegeink listája.  
+ - Ha **admisztrátorként** bejelentkezik egy felhasználó, a következő menüpontok érhetők el: *Kezdőlap, Keresés, Új feltöltések, Admin regisztráció, Kijelentkezés.*
+ A Keresés a fentiekkel megegyező. Az Új feltöltések menüpont kilistázza a bejelentkezett ellenőr által beszélt nyelvű, még jóvá nem hagyott
+ dalszövegek listáját, ahol további műveleteket lehet végezni a kiválasztott dalszöveggel. Az Admin regisztrációban új adminisztrátort, azaz
+ ellenőrt lehet regisztrálni.  
+   
 ### 5.5 Képernyőtervek  
    
+### Kezdőképernyő  
+![kezdo](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_kezdo_oldal.png)  
+  
+### Regisztrációs képernyő  
+![regisztracio](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_regisztracios_oldal.png)  
+  
+### Bejelentkezési képernyő  
+![bejelentkezes](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_bejelentkezesi_oldal.png)  
+  
+### Feltöltési képernyő  
+![feltoltes](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_feltoltes_oldal.png)  
+  
+### Keresési képernyő  
+![kereses](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_kereses_oldal.png)
+  
+### Találatok képernyő  
+![talalatok](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_talalatok_oldal.png)
+   
+### Ellenőrzési képernyő  
+![ellenorzes](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_ellenorzes_oldal.png)
+  
+
 ## 6. Fizikai környezet
 
 ### 6.1 Vásárolt softwarekomponensek és külső rendszerek
