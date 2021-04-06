@@ -321,24 +321,31 @@ A kliens oldali alkalmazásban minden funkció elérhető a navigációs sávokb
 ### 5.5 Képernyőtervek  
    
 ### Kezdőképernyő  
+  
 ![kezdo](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_kezdo_oldal.png)  
   
 ### Regisztrációs képernyő  
+  
 ![regisztracio](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_regisztracios_oldal.png)  
   
 ### Bejelentkezési képernyő  
-![bejelentkezes](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_bejelentkezesi_oldal.png)  
+  
+![bejelentkezes](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_bejelentkezes_oldal.png)  
   
 ### Feltöltési képernyő  
+  
 ![feltoltes](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_feltoltes_oldal.png)  
   
 ### Keresési képernyő  
+   
 ![kereses](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_kereses_oldal.png)
   
 ### Találatok képernyő  
+   
 ![talalatok](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_talalatok_oldal.png)
    
-### Ellenőrzési képernyő  
+### Ellenőrzési képernyő   
+   
 ![ellenorzes](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/prototipus_ellenorzes_oldal.png)
   
 
