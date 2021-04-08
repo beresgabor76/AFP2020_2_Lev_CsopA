@@ -43,8 +43,13 @@ Előfeltételek:
 ![usecase_dia](https://github.com/beresgabor76/AFP2020_2_Lev_CsopA/blob/main/Doc/image/usecasedia.png)
 
 ## 3. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
- 
-
+* K01, K02: A <feltöltő>-k és <adminisztrátor>-ok a <regisztráció> funkció használatával tudnak feliratkozni az oldalra, így kerülnek be a <rendszer adatbázis>-ban tárolt nyilvántartásba.
+* K03: A feltöltött dalszövegek a <rendszer adatbázis>-ba kerülnek és lehetőség van köztük <keresés>-re, valamint <letölteni> azokat. 
+* K04: A <feltöltők> a rendszerbe történő <bejelentkezés> után a <feltöltés> funkció használatával tudnak dalszövegeket a <rendszer adatbázis>-ba elhelyezni. 
+* K05: A <letöltő>-k a <keresés> funkció segítségével tudnak keresni a <rendszer adatbázis>-ba korábban feltöltött dalszövegek között,
+valamint a <letöltés> funkció használatával tudják azokat lementeni a saját gépükre.  
+* K06: Az <adminisztrátor>-ok az alkalmazásba történő <bejelentkezés> után a <jóváhagyás>, <visszautasítás>, valamint <törlés> funkciók segítségével tudják a <rendszer adatbázis>-ba feltöltött dalszövegeket kezelni.
+                                                                                                                                                                                                                                                                                                                                                                                                                                         
 ## 4. Képernyőtervek
   
 ### Kezdőképernyő  
