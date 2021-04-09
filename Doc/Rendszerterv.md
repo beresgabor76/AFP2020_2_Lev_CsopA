@@ -585,33 +585,30 @@ A MongoDB adatbáziskezelő esetén nincs szükség előzetesen létrehozni az a
       
 ## 12. Telepítési terv
 
-Fizikai telepítési terv:
+* Fizikai telepítési terv:
+  * Adatbázis- és webszerver 
+    * Ubuntu Server 20.04.02 LTS operációs rendszer futtatására alkalmas. 
+    * MongoDB adatbázis elérés biztosítása.
+    * Node.js szoftvercsomag futtatásának biztosítása.  
+    * Akár nagy számú (egyidőben több ezer) felhasználó kiszolgálására is elegendő teljesítménnyel rendelkezzen.
+    * A teljesítménye legalább a következő konfigurációval ekvivalens: 4 magos 2.4+ GHz CPU, 32GB RAM, 2x500GB SSD RAID, jó minőségű tápegység.
+    * A számítógépháznak és a hűtés kialakításának alkalmasnak kell lennie szerverteremben lévő rack szekrényben történő elhelyezésre.  
 
-* Adatbázis- és webszerver 
-  * Ubuntu Server 20.04.02 LTS operációs rendszer futtatására alkalmas. 
-  * MongoDB adatbázis elérés biztosítása.
-  * Node.js szoftvercsomag futtatásának biztosítása.  
-  * Akár nagy számú (egyidőben több ezer) felhasználó kiszolgálására is elegendő teljesítménnyel rendelkezzen.
-  * A teljesítménye legalább a következő konfigurációval ekvivalens: 4 magos 2.4+ GHz CPU, 32GB RAM, 2x500GB SSD RAID, jó minőségű tápegység.
-  * A számítógépháznak és a hűtés kialakításának alkalmasnak kell lennie szerverteremben lévő rack szekrényben történő elhelyezésre.  
+  * A szerver elhelyezése
+    * A kiszolgáló olyan szerverteremben kerül elhelyezésre, ahol biztosított a 24 órás hozzáférés.
+    * A szerver elhelyezése rack szekrényben történik.   
+    * Az szerverteremben biztosított internetkapcsolatnak el kell érnie a 1Gbit/s letöltési és feltöltési sebességet belföldi és nemzetközi irányokban is.
+    * Fontos a rendelkezésre állás, ezért a megbízható áramellátás áramkimaradás esetén akár aggregátorról is biztosított legyen.
+    * Legalább 10TB adatforgalom álljon rendelkezésre a belföldi és nemzetközi irányokba történő adatátvitelhez.
 
-* A szerver elhelyezése
-  * A kiszolgáló olyan szerverteremben kerül elhelyezésre, ahol biztosított a 24 órás hozzáférés.
-  * A szerver elhelyezése rack szekrényben történik.   
-  * Az szerverteremben biztosított internetkapcsolatnak el kell érnie a 1Gbit/s letöltési és feltöltési sebességet belföldi és nemzetközi irányokban is.
-  * Fontos a rendelkezésre állás, ezért a megbízható áramellátás áramkimaradás esetén akár aggregátorról is biztosított legyen.
-  * Legalább 10TB adatforgalom álljon rendelkezésre a belföldi és nemzetközi irányokba történő adatátvitelhez.
-
+* Szoftver telepítési terv:
+  * Szerver:
+    * Ubuntu Server 20.04.02 LTS operációs rendszer.
+    * MongoDB Community Server 4.4.5 adatbáziskezelő.
+    * Node.js 14.16.1 szoftvercsomag
   
-Szoftver telepítési terv:
-
-* Szerver:
-  * Ubuntu Server 20.04.02 LTS operációs rendszer.
-  * MongoDB Community Server 4.4.5 adatbáziskezelő.
-  * Node.js 14.16.1 szoftvercsomag
-  
-* Kliens:
-  * A szoftver felhasználói felülete a népeszerű böngészők legfrissebb verzióinak használatával elérhető (pl. Mozilla Firefox, Google Chrome, Microsoft Edge, Apple Safari), egyéb szoftver telepítésére nincs szükség.
+  * Kliens:
+    * A szoftver felhasználói felülete a népeszerű böngészők legfrissebb verzióinak használatával elérhető (pl. Mozilla Firefox, Google Chrome, Microsoft Edge, Apple Safari), egyéb szoftver telepítésére nincs szükség.
   
     
       
