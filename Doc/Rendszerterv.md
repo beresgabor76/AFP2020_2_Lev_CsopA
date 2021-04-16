@@ -581,8 +581,190 @@ A MongoDB adatbáziskezelő esetén nincs szükség előzetesen létrehozni az a
     
 ### 10.3 Kliens oldal osztályai 
    
-## 11. Tesztterv   
-      
+## 11. Tesztterv
+
+A tesztelés célja, annak ellenőrzése, hogy a program az üzleti folyamatokban specifikáltaknak megfelelően működik-e.
+Ezen felül kipróbálásra kerül az is, hogy a program különböző hardver és szoftver környezetben hogyan használható.
+
+A teszteléshez használt szerver és kliens konfigurációk megfelenek a hardver és szoftver követelményekben megadottaknak.
+A kliensek tesztelése a legelterjedtebb böngészőkön történik: Mozilla Firefox, Google Chrome, Microsoft Edge).
+
+A tesztelés folyamán a külöböző üzleti folyamatokhoz tartozó forgatókönyvek végrehajtásának eredményét vizsgáljuk és 
+amennyiben az megfelel az elvártaknak, akkor a teszteset sikeresnek tekinthető, ellenkező esetben a hibát rögzítjük a 
+tesztjegyzőkönyvben.
+
+### 11.1 Tesztelt üzleti folyamatok adminisztrátorok számára:
+
+**Regisztráció a rendszerben:** 
+Az adminisztrátorok számára elérhető AdminRegisztráció menüpont használatával lehetséges új adminisztrátor rögzítése a rendszerben.
+A bejelentkezési név, e-mail, jelszó és a beszélt nyelvek listájának megadása szükséges.
+A név hossza 5-50 karakter között lehet, az email cím mérete 5-255 karakter, valamint meg kell felelnie az e-mail címekre 
+vonatkozó általános szabályoknak, a jelszó (5-20 karakter) nem tartalmazhat whitespace karaktert, a felsorolt nyelvek pedig 
+kisbetűs 3-25 karakter hosszúságú szavak lehetnek. A megadott jelszó megerősítésére is szükség van, a regisztráció csak akkor 
+érvényes, ha mindkét erre szolgáló beviteli mezőben ugyanaz a jelszó van megadva. A regisztráció során nem lehet olyan 
+bejelentkezési nevet megadni, amit korábban már regisztráltak a rendszerben.
+
+**Tesztesetek:**
+1. A bevitt adatok helyesek, megfelelnek az előírt követelményeknek.
+Elvárt eredmény: A regisztrált adminisztrátor adatai bekerüljenek az adatbázisba, valamint a megadott adatokkal be lehessen jelentkezni 
+a rendszerbe.
+2. A követelményeknek nem megfelelő adat(ok) megadása esetén:
+Elvárt eredmény: A program jelezze, hogy melyik megadott adat nem volt megfelelő és ezután lehetőség legyen javítani azt.
+
+
+**Belépés a rendszerbe:**
+A Regisztráció menüpont használatával tudnak a korábban már regisztrált adminisztrátorok belépni a rendszerbe.
+
+**Tesztesetek:**
+1. A megadott felhasználónév-jelszó kombináció nem tartozik egyik regisztrált felhasználóhoz sem. 
+Elvárt eredmény: hibaüzenet jelzi a felhasználó számára, hogy nem megfelelő belépési adatokat adott meg.
+2. A felhasználónév-jelszó kombinációhoz tartozik regisztrált felhasználó a rendszerben.
+Elvárt eredmény: a rendszer belépteti a felhasználót, a navigációs sávon megjelennek az adminisztrátorok által elérhető funkciók.
+
+
+**Keresés:**
+A feltöltött dalszövegek között lehet keresni, előadó, cím, album vagy dalszöveg részlet megadásával.
+
+**Tesztesetek:**
+
+1. A megadott adatok alapján nem található a keresési feltételeknek megfelelő dalszöveg az adatbázisban. 
+Elvárt eredmény: tájékoztató üzenet jelzi a felhasználó számára, hogy a megadott keresési feltételeknek megfelelő dalszöveg nem található az adatbázisban. 
+2. A megadott adatok alapján található legalább egy, a keresésnek megfelelő dalszöveg az adatbázisban. 
+Elvárt eredmény: a találtok listája jelenik mega a képernyőn.
+
+
+**Dalszövegek ellenőrzése:**
+A még nem ellenörzőtt dalszövegek listáját az "Új feltöltések" menüpont használatával lehet lekérni.
+A listában csak azok a feltöltött dalszövegek fognak megjelenni, amiknek a nyelve szerepel az adminisztrátor által megadott ismert nyelvek között.  
+Itt egy tetszőleges dalszöveg kiválasztása után az alábbi lehetőségek közül választhatunk: 
+- Ellenörzés: a dalszöveg átnézése jóváhagyás, vagy elutsítás elött.
+- Jóváhagyás: ha a dalszöveg ellenőrzése során megfelelőnek találtuk a fordítást, akkor itt tudjuk jóváhagyni azt.
+- Visszautasítás: ha a dalszöveg ellenörzése során hibát találunk, akkor a közzétételt visszautasítva  javításra kérhetjük annak feltőltőjét
+
+**Tesztesetek:**
+1. A menüpont elindításakor vannak korábban még nem ellenörzött dalszövegek az adatbázisban. 
+Elvárt eredmény: az eddig még nem ellenörzött, azaz korábban sem jóváhagyásra, sem elutasításra nem került dalszövegek listájának meg kell jelennie a képernyőn. 
+2. A menüpont elindításakor nincsenek korábban még nem ellenörzött dalszövegek az adatbázisban. 
+Elvárt eredmény: a képernyőn nem jelenhet meg egyetlen dalszöveg sem a találati listában.
+3. Az "Ellenörzés" gombra kattintás. 
+Elvárt eredmény: a megfelelő dalszövegnek kell megjelennie.
+4. A "Jóváhagyás" gomb használata.
+Elvárt eredmény: a dalszöveg publikálásra kerül, meg kell jelennie a letöltők számára elérhető dalszövegek között.
+5. A "Visszautasítás" gomb megnyomása.
+Elvárt eredmény: a feltöltő kap lehetőséget a dalszöveg javítására.
+
+
+**Kijelentkezés:**
+A belépett adminisztrátorok tudnak a rendszerből kijelentkezni. 
+
+**Tesztesetek:**
+1. A "Kijelentkezés" menüpont használata.
+Elvárt működés: az adaminisztrátor funkciók az újabb sikeres bejelentkezésig nem lehetnek elérhetők, valamint a navigációs sávnak vissza kell állnia az alapállapotba,
+azaz a "Kijelentkezés" menüpont már nem lehet elérhető, ugyanakkor a "Bejelentkezés" funkciónak újra elérhetővé kell válnia.
+
+
+### 11.2 Tesztelt üzleti folyamatok feltöltők számára:
+
+**Regisztráció a rendszerben:** 
+A Regisztráció menüpont használatával tudnak a dalszöveget feltölteni kívánók regisztrálni a rendszerben.
+A bejelentkezési név, e-mail, jelszó és a beszélt nyelvek listájának megadása szükséges.
+A név hossza 5-50 karakter között lehet, az email cím mérete 5-255 karakter, valamint meg kell felelnie az e-mail címekre 
+vonatkozó általános szabályoknak, a jelszó (5-20 karakter) nem tartalmazhat whitespace karaktert, a felsorolt nyelvek pedig 
+kisbetűs 3-25 karakter hosszúságú szavak lehetnek. A megadott jelszó megerősítésére is szükség van, a regisztráció csak akkor 
+érvényes, ha mindkét erre szolgáló beviteli mezőben ugyanaz a jelszó van megadva. A regisztráció során nem lehet olyan 
+bejelentkezési nevet megadni, amit korábban már regisztráltak a rendszerben.
+
+**Tesztesetek:**
+1. A bevitt adatok helyesek, megfelelnek az előírt követelményeknek.
+Elvárt eredmény: A regisztrált felhasználó adatai bekerüljenek az adatbázisba, valamint a megadott adatokkal be lehessen jelentkezni 
+a rendszerbe.
+2. A követelményeknek nem megfelelő adat(ok) megadása esetén:
+Elvárt eredmény: A program jelezze, hogy melyik megadott adat nem volt megfelelő és ezután lehetőség legyen javítani azt.
+
+
+**Belépés a rendszerbe:**
+A Regisztráció menüpont használatával tudnak a korábban már regisztrált felhasználók belépni a rendszerbe.
+
+**Tesztesetek:**
+1. A megadott felhasználónév-jelszó kombináció nem tartozik egyik regisztrált felhasználóhoz sem. 
+Elvárt eredmény: hibaüzenet jelzi a felhasználó számára, hogy nem megfelelő belépési adatokat adott meg.
+2. A felhasználónév-jelszó kombinációhoz tartozik regisztrált felhasználó a rendszerben.
+Elvárt eredmény: a rendszer belépteti a felhasználót, a navigációs sávon megjelennek a feltöltők által elérhető funkciók.
+
+
+**Dalszövegek keresése:**
+A feltöltött dalszövegek között lehet keresni, előadó, cím, album vagy dalszöveg részlet megadásával.
+
+**Tesztesetek:**
+
+1. A megadott adatok alapján nem található a keresési feltételeknek megfelelő dalszöveg az adatbázisban. 
+Elvárt eredmény: tájékoztató üzenet jelzi a felhasználó számára, hogy a megadott keresési feltételeknek megfelelő dalszöveg nem található az adatbázisban. 
+2. A megadott adatok alapján található legalább egy a keresésnek megfelelő dalszöveg az adatbázisban. 
+Elvárt eredmény: a találtok listája jelenik mega a képernyőn.
+
+
+**Dalszövegek javítása:**
+Az adminisztrátorok által javításra jelölt dalszövegek listázása és módosítása.
+
+**Tesztesetek:**
+1. Nincsenek javításra jelölt daszövegek a felhasználó által feltöltöttek között. 
+Elvárt eredmény: a "Javítás" menüpont használata után nem jelenhet meg egyetlen dalszöveg sem a javításra jelölt dalszövegek listájában.
+2. Vannak javításra jelölt daszövegek a felhasználó által feltöltöttek között. 
+Elvárt eredmény: a "Javítás" menüpont használata után a javításra jelölt dalszövegek listájának kell megjelennie.
+
+
+**Dalszövegek feltöltése:**
+A bejelentkezett felhasználók a "Feltöltés" menüpont használatával tudnak dalszövegeket feltölteni a rendszerbe.
+A feltöltéshez az alábbi adatokat kell megadni:
+- Előadó: 2-50 karakter, kötelező
+- Cím: 3-100 karakter, kötelező
+- Album: max.100 karakter 
+- Dalszöveg eredeti nyelve: 3-50 karakter 
+- Eredeti dalszöveg: 50-5000 karakter, kötelező
+- Dalszöveg magyar nyeleven: 50-5000 karakter, kötelező
+
+**Tesztesetek:**
+1. A bevitt adatok helyesek, megfelelnek az előírt követelményeknek.
+Elvárt eredmény: A dalszöveg rögzítésre kerüljön az adatbázisban.
+2. A követelményeknek nem megfelelő adat(ok) megadása esetén:
+Elvárt eredmény: A program jelezze, hogy melyik megadott adat nem volt megfelelő és ezután lehetőség legyen javítani azt. 
+  
+
+**Kijelentkezés:**
+A belépett feltöltők tudnak a rendszerből kijelentkezni. 
+
+**Tesztesetek:**
+1. A "Kijelentkezés" menüpont használata.
+Elvárt működés: az feltöltők által használható funkciók az újabb sikeres bejelentkezésig nem lehetnek elérhetők, valamint a navigációs sávnak vissza kell állnia az alapállapotba,
+azaz a "Kijelentkezés" menüpontnak el kell tünnie, ugyanakkor a "Bejelentkezés" funkciónak újra elérhetővé kell válnia.
+
+
+
+### 11.3 Tesztelt üzleti folyamatok letöltők számára:
+A letöltők regisztráció nélkül is elérik a rendszert, amiben dalszövegek keresésére, böngészésére valamint letöltésére van lehetőségük.
+
+**Dalszövegek keresése:**
+A feltöltött dalszövegek között lehet keresni, előadó, cím, album vagy dalszöveg részlet megadásával.
+
+**Tesztesetek:**
+
+1. A megadott adatok alapján nem található a keresési feltételeknek megfelelő dalszöveg az adatbázisban. 
+Elvárt eredmény: tájékoztató üzenet jelzi a felhasználó számára, hogy a megadott keresési feltételeknek megfelelő dalszöveg nem található az adatbázisban. 
+2. A megadott adatok alapján található legalább egy a keresésnek megfelelő dalszöveg az adatbázisban. 
+Elvárt eredmény: a találtok listája jelenik mega a képernyőn.
+
+
+**Dalszövegek letöltése:**
+A megjelenített dalszövegek letöltésére a rendszerbe történő bejelentkezés nélkül van lehetőség.
+
+**Tesztesetek:**
+
+1. A kiválasztott dalszöveg megtalálható az adatbázisban. 
+Elvárt eredmény: a dalszöveg letöltése megkezdödjön. 
+2. A kiválasztott dalszöveg nem elérhető az adatbázisban. 
+Elvárt eredmény: hibaüzenet jelenjen meg a dalszöveg elérhetetlenségéről.
+
+       
 ## 12. Telepítési terv
 
 * Fizikai telepítési terv:
