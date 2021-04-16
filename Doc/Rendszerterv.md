@@ -2,6 +2,13 @@
 
 ## 1. A rendszer célja
   
+A rendszer célja, hogy idegen nyelvű dalszövegeket és magyar fordításukat elérhetővé tegye minél több felhasználó számára webes felületen.
+ Lehetővé teszi hogy bármely regisztrált és bejelentkezett felhasználó feltöltsön dalszövegeket az adatbázisba, melyek egy ellenőrzésen esnek át,
+ és ezt követően jóváhagyás esetén válnak kereshetővé, majd letölthetővé anonim vagy bejelentkezett felhasználók számára. Az adatbázis 
+ kereshető előadó, cím, album és dalszöveg részlet alapján. Az adminisztrátorok felelőssége ellenőrizni, majd jóváhagyni vagy
+ visszautasítani a feltöltött dalszövegeket. Szintén az ő hatáskörükbe tartozik új adminisztrátorok regisztrációja. A feltöltőknek
+ lehetőséget kell biztosítani a visszautasított dalszöveg módosítására az ellenőr észrevételei alapján.  
+   
 ## 2. Projektterv
 
 ### 2.1 Projektszerepkörök, felelősségek
