@@ -573,15 +573,7 @@ A MongoDB adatbáziskezelő rendszer nem teszi lehetővé tárolt eljárások al
 A MongoDB adatbáziskezelő esetén nincs szükség előzetesen létrehozni az adatbázist és a kollekciókat, az első dokumentumok mentésekor megteszi
  ezt helyettünk.  
     
-## 10. Implementációs terv
-   
-### 10.1 Perzisztencia osztályok 
-   
-### 10.2 Üzleti logika osztályai
-    
-### 10.3 Kliens oldal osztályai 
-   
-## 11. Tesztterv
+## 10. Tesztterv
 
 A tesztelés célja, annak ellenőrzése, hogy a program az üzleti folyamatokban specifikáltaknak megfelelően működik-e.
 Ezen felül kipróbálásra kerül az is, hogy a program különböző hardver és szoftver környezetben hogyan használható.
@@ -593,7 +585,7 @@ A tesztelés folyamán a külöböző üzleti folyamatokhoz tartozó forgatókö
 amennyiben az megfelel az elvártaknak, akkor a teszteset sikeresnek tekinthető, ellenkező esetben a hibát rögzítjük a 
 tesztjegyzőkönyvben.
 
-### 11.1 Tesztelt üzleti folyamatok adminisztrátorok számára:
+### 10.1 Tesztelt üzleti folyamatok adminisztrátorok számára:
 
 **Regisztráció a rendszerben:** 
 Az adminisztrátorok számára elérhető AdminRegisztráció menüpont használatával lehetséges új adminisztrátor rögzítése a rendszerben.
@@ -663,7 +655,7 @@ Elvárt működés: az adaminisztrátor funkciók az újabb sikeres bejelentkez�
 azaz a "Kijelentkezés" menüpont már nem lehet elérhető, ugyanakkor a "Bejelentkezés" funkciónak újra elérhetővé kell válnia.
 
 
-### 11.2 Tesztelt üzleti folyamatok feltöltők számára:
+### 10.2 Tesztelt üzleti folyamatok feltöltők számára:
 
 **Regisztráció a rendszerben:** 
 A Regisztráció menüpont használatával tudnak a dalszöveget feltölteni kívánók regisztrálni a rendszerben.
@@ -740,7 +732,7 @@ azaz a "Kijelentkezés" menüpontnak el kell tünnie, ugyanakkor a "Bejelentkez�
 
 
 
-### 11.3 Tesztelt üzleti folyamatok letöltők számára:
+### 10.3 Tesztelt üzleti folyamatok letöltők számára:
 A letöltők regisztráció nélkül is elérik a rendszert, amiben dalszövegek keresésére, böngészésére valamint letöltésére van lehetőségük.
 
 **Dalszövegek keresése:**
@@ -765,7 +757,7 @@ Elvárt eredmény: a dalszöveg letöltése megkezdödjön.
 Elvárt eredmény: hibaüzenet jelenjen meg a dalszöveg elérhetetlenségéről.
 
        
-## 12. Telepítési terv
+## 11. Telepítési terv
 
 * Fizikai telepítési terv:
   * Adatbázis- és webszerver 
@@ -791,13 +783,4 @@ Elvárt eredmény: hibaüzenet jelenjen meg a dalszöveg elérhetetlenségéről
   
   * Kliens:
     * A szoftver felhasználói felülete a népeszerű böngészők legfrissebb verzióinak használatával elérhető (pl. Mozilla Firefox, Google Chrome, Microsoft Edge, Apple Safari), egyéb szoftver telepítésére nincs szükség.
-  
-    
-      
-      
-             
-  
-   
-   
-
 
