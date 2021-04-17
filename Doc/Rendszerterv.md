@@ -612,7 +612,7 @@ Elvárt eredmény: A program jelezze, hogy melyik megadott adat nem volt megfele
 
 
 **Belépés a rendszerbe:**
-A Regisztráció menüpont használatával tudnak a korábban már regisztrált adminisztrátorok belépni a rendszerbe.
+A Bejelentkezés menüpont használatával tudnak a korábban már regisztrált adminisztrátorok belépni a rendszerbe.
 
 **Tesztesetek:**
 1. A megadott felhasználónév-jelszó kombináció nem tartozik egyik regisztrált felhasználóhoz sem. 
@@ -682,7 +682,7 @@ Elvárt eredmény: A program jelezze, hogy melyik megadott adat nem volt megfele
 
 
 **Belépés a rendszerbe:**
-A Regisztráció menüpont használatával tudnak a korábban már regisztrált felhasználók belépni a rendszerbe.
+A Bejelentkezés menüpont használatával tudnak a korábban már regisztrált felhasználók belépni a rendszerbe.
 
 **Tesztesetek:**
 1. A megadott felhasználónév-jelszó kombináció nem tartozik egyik regisztrált felhasználóhoz sem. 
