@@ -1,12 +1,9 @@
-## Teszt jegyzőkönyv
-Tesztelést végezte: Németh  Richárd
-Operációs rendszer: Windows 10
-Böngésző: Mozilla Firefox 87.0
-Dátum: 2021.04.17.
+## Teszt jegyzőkönyv  
+Tesztelést végezte: Németh Richárd   
+Operációs rendszer: Windows 10  
+Böngésző: Mozilla Firefox V87.0  
+Dátum: 2021.04.17  
 Talált hibák száma: 0
-
-
-
 
 | Sorszám | Leírás                                                                                                                                                                                                                                                                                                                           | Eredmény (OK/NOK) |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
